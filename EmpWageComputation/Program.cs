@@ -1,13 +1,22 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Welcome to Employee Wage");
 
-Random random = new Random();
-int result = random.Next(0, 2);
-if (result == 1)
-{
-    Console.WriteLine("Employee is Present");
-}
-else
-{
-    Console.WriteLine("Employee is absent");
-}
+
+    int IS_FULL_TIME = 1;
+    int EMP_RATE_PER_HOUR = 20;
+    //Variables
+    int empHrs = 0;
+    int empWage = 0;
+    Random random = new Random();
+    //Computation
+    int empCheck = random.Next(0, 2);
+    if (empCheck == IS_FULL_TIME)
+    {
+        empHrs = 8;
+    }
+    else
+    {
+        empHrs = 0;
+    }
+    empWage = empHrs * EMP_RATE_PER_HOUR;
+    Console.WriteLine("Emp Wage : " + empWage);
